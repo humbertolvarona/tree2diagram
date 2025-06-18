@@ -2,6 +2,8 @@
 
 Converts directory tree text files into Mermaid or D2 graph diagrams
 
+# tree2diagram: Documentation
+
 ## Overview
 
 `tree2diagram` is a Python utility that parses a text-based tree structure (using characters like ├── and └──) and generates a diagram in either [Mermaid](https://mermaid-js.github.io/) or [D2](https://d2lang.com/) syntax. It is designed to automate the conversion of simple text trees into graph diagrams for documentation, visualization, or presentation purposes.
@@ -146,6 +148,23 @@ root_B_B1: "B1"
 root_B -> root_B_B1
 ```
 
+If run with Mermaid mode, it produces `data.mmd`:
+
+```
+graph TD
+    root[root]
+    root --> root_A
+    root_A[A]
+    root_A --> root_A_A1
+    root_A_A1[A1]
+    root_A --> root_A_A2
+    root_A_A2[A2]
+    root --> root_B
+    root_B[B]
+    root_B --> root_B_B1
+    root_B_B1[B1]
+```
+
 ---
 
 ## Customization
@@ -167,20 +186,4 @@ root_B -> root_B_B1
 
 Copyright (c) 2024 HL Varona ([humberto.varona@gmail.com](mailto:humberto.varona@gmail.com))
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This code is licensed under the MIT License. You are free to use, modify, and distribute it.
