@@ -2,8 +2,6 @@
 
 Converts directory tree text files into Mermaid or D2 graph diagrams
 
-# tree2diagram: Documentation
-
 ## Overview
 
 `tree2diagram` is a Python utility that parses a text-based tree structure (using characters like ├── and └──) and generates a diagram in either [Mermaid](https://mermaid-js.github.io/) or [D2](https://d2lang.com/) syntax. It is designed to automate the conversion of simple text trees into graph diagrams for documentation, visualization, or presentation purposes.
@@ -99,10 +97,10 @@ Refer to your distribution’s documentation if you use another Linux variant.
 * **`parse_tree_txt(file_path)`**
   Reads a tree-formatted text file and returns a nested dictionary representing the tree.
 
-* **`to_mermaid(tree, prefix=".", level=0)`**
+* **`to_mermaid(tree, prefix=".")`**
   Converts a tree dictionary into a Mermaid flowchart (graph TD) format string.
 
-* **`to_d2(tree, prefix=".", level=0)`**
+* **`to_d2(tree, prefix=".")`**
   Converts a tree dictionary into D2 format string.
 
 * **`generate_diagram(tree, mode="d2", prefix="root")`**
@@ -115,7 +113,10 @@ Refer to your distribution’s documentation if you use another Linux variant.
   Saves the generated diagram to a file.
 
 * **`run_tree2diagram(input_txt, mode="d2", prefix="root")`**
-  Orchestrates the process: parsing, diagram generation, and saving.
+  Orchestrates the process: parsing, diagram generation, and saving in d2 format.
+
+* **`run_tree2diagram(input_txt, mode="mermaid", prefix="root")`**
+  Orchestrates the process: parsing, diagram generation, and saving in mermaid format.
 
 ---
 
